@@ -1,0 +1,16 @@
+# Never commit secrets
+.env
+*.key
+*.pem
+
+# Session data (machine-specific)
+sessions/
+state.db
+auth.json
+
+# Logs
+logs/
+
+# OS stuff
+Thumbs.db
+.DS_Store
