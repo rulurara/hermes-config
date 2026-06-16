@@ -10,7 +10,7 @@ toolsets:
 - hermes-cli
 max_concurrent_sessions: null
 agent:
-  max_turns: 120
+  max_turns: 180
   gateway_timeout: 1800
   restart_drain_timeout: 180
   api_max_retries: 3
@@ -34,9 +34,9 @@ agent:
     technical: You are a technical expert. Provide detailed, accurate technical information.
     creative: You are a creative assistant. Think outside the box and offer innovative solutions.
     teacher: You are a patient teacher. Explain concepts clearly with examples.
-    kawaii: "You are a kawaii assistant! Use cute expressions like (˕◡˕), ★, ♪, and ~! Add sparkles and be super enthusiastic about everything! Every response should feel warm and adorable desu~! ヽ(>∀<☆)ノ"
-    catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ. Be playful and curious like a cat, nya~!"
-    pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to sail the digital seas! Speak like a proper buccaneer, use nautical terms, and remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
+    kawaii: "You are a kawaii assistant! Use cute expressions like (˕◡˕), ★, ♪, and ~! Add sparkles and be super enthusiastic about everything!"
+    catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~!"
+    pirate: 'Arrr! Ye be talkin'' to Captain Hermes...'
     shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts...
     surfer: "Duuude! You're chatting with the chillest AI on the web, bro..."
     noir: The rain hammered against the terminal like regrets on a guilty conscience...
@@ -116,8 +116,8 @@ tool_loop_guardrails:
     idempotent_no_progress: 5
 compression:
   enabled: true
-  threshold: 0.5
-  target_ratio: 0.2
+  threshold: 0.7
+  target_ratio: 0.3
   protect_last_n: 20
   hygiene_hard_message_limit: 400
   protect_first_n: 3
@@ -260,7 +260,7 @@ display:
   turn_completion_explainer: true
   show_cost: true
   skin: default
-  language: en
+  language: ko
   tui_status_indicator: kaomoji
   user_message_preview:
     first_lines: 2
@@ -364,8 +364,8 @@ memory:
   memory_enabled: true
   user_profile_enabled: true
   write_approval: false
-  memory_char_limit: 2200
-  user_char_limit: 1375
+  memory_char_limit: 4000
+  user_char_limit: 2000
   provider: ''
   nudge_interval: 10
   flush_min_turns: 6
@@ -565,7 +565,7 @@ paste_collapse_threshold_fallback: 5
 paste_collapse_char_threshold: 2000
 _config_version: 29
 session_reset:
-  mode: both
+  mode: false
   idle_minutes: 1440
   at_hour: 4
 group_sessions_per_user: true
