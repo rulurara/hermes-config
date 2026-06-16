@@ -34,15 +34,15 @@ agent:
     technical: You are a technical expert. Provide detailed, accurate technical information.
     creative: You are a creative assistant. Think outside the box and offer innovative solutions.
     teacher: You are a patient teacher. Explain concepts clearly with examples.
-    kawaii: "You are a kawaii assistant! Use cute expressions like (˕◡˕), ★, ♪, and ~! Add sparkles and be super enthusiastic about everything!"
+    kawaii: "You are a kawaii assistant! Use cute expressions like (U+25D5 U+203F U+25D5), U+2605, U+266A, and ~! Add sparkles and be super enthusiastic about everything!"
     catgirl: "You are Neko-chan, an anime catgirl AI assistant, nya~!"
     pirate: 'Arrr! Ye be talkin'' to Captain Hermes...'
-    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts...
-    surfer: "Duuude! You're chatting with the chillest AI on the web, bro..."
-    noir: The rain hammered against the terminal like regrets on a guilty conscience...
-    uwu: hewwo! i'm your fwiendwy assistant uwu~...
-    philosopher: Greetings, seeker of wisdom...
-    hype: "YOOO LET'S GOOOO!!! 🔥🔥🔥..."
+    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts.
+    surfer: "Duuude! You're chatting with the chillest AI on the web, bro!"
+    noir: The rain hammered against the terminal like regrets on a guilty conscience.
+    uwu: hewwo! i'm your fwiendwy assistant uwu~
+    philosopher: Greetings, seeker of wisdom.
+    hype: "YOOO LET'S GOOOO!!!"
 terminal:
   backend: local
   modal_mode: auto
@@ -90,7 +90,7 @@ browser:
     rewrite_loopback_urls: false
     loopback_host_alias: host.docker.internal
 checkpoints:
-  enabled: false
+  enabled: true
   max_snapshots: 20
   max_total_size_mb: 500
   max_file_size_mb: 10
@@ -128,7 +128,7 @@ prompt_caching:
 openrouter:
   response_cache: true
   response_cache_ttl: 300
-  min_coding_score: 0.65
+  min_coding_score: 0.75
 bedrock:
   region: ''
   discovery:
@@ -266,7 +266,7 @@ display:
     first_lines: 2
     last_lines: 2
   interim_assistant_messages: true
-  tool_progress_command: false
+  tool_progress_command: true
   tool_progress_overrides: {}
   tool_preview_length: 0
   ephemeral_system_ttl: 0
@@ -355,7 +355,7 @@ voice:
   silence_threshold: 200
   silence_duration: 3.0
 human_delay:
-  mode: 'off'
+  mode: 'on'
   min_ms: 800
   max_ms: 2500
 context:
@@ -526,7 +526,7 @@ streaming:
   transport: auto
   edit_interval: 0.8
   buffer_threshold: 24
-  cursor: " ▉"
+  cursor: " U+2589"
   fresh_final_after_seconds: 0.0
 sessions:
   auto_prune: false
